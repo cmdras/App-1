@@ -21,28 +21,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Qi-Sl-SG6">
-                                <rect key="frame" x="166" y="20" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Qi-Sl-SG6">
+                                <rect key="frame" x="166.5" y="20" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FDD-BR-C4i">
-                                <rect key="frame" x="139" y="49" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FDD-BR-C4i">
+                                <rect key="frame" x="139.5" y="49" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="GFA-dU-5eO"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVR-pT-Ah6">
-                                <rect key="frame" x="164" y="87" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVR-pT-Ah6">
+                                <rect key="frame" x="164.5" y="87" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="displayName:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wnx-jQ-qlA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FDD-BR-C4i" firstAttribute="top" secondItem="0Qi-Sl-SG6" secondAttribute="bottom" constant="8" symbolic="YES" id="5fg-JU-XeV"/>
+                            <constraint firstItem="FDD-BR-C4i" firstAttribute="centerX" secondItem="MVR-pT-Ah6" secondAttribute="centerX" id="6Ir-S0-TEA"/>
+                            <constraint firstItem="MVR-pT-Ah6" firstAttribute="top" secondItem="FDD-BR-C4i" secondAttribute="bottom" constant="8" symbolic="YES" id="7TC-Zy-I1D"/>
+                            <constraint firstItem="0Qi-Sl-SG6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7he-Ve-Oyz"/>
+                            <constraint firstItem="0Qi-Sl-SG6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="JIN-y7-27E"/>
+                            <constraint firstItem="0Qi-Sl-SG6" firstAttribute="centerX" secondItem="FDD-BR-C4i" secondAttribute="centerX" id="zy1-B4-0lh"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="inputName" destination="FDD-BR-C4i" id="92m-Xy-so2"/>
+                        <outlet property="name" destination="0Qi-Sl-SG6" id="8gy-4k-wJl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
